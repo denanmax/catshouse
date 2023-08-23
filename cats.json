@@ -1,0 +1,66 @@
+[
+  {
+    "model": "cats.categories",
+    "pk": 1,
+    "fields": {
+      "name": "Кошка Б.П",
+      "description": "Просто обычная , хорошая кошка"
+    }
+  },
+  {
+    "model": "cats.categories",
+    "pk": 2,
+    "fields": {
+      "name": "Бесоёб",
+      "description": "Кошка раннего утро, бегает и даже мяучит, или даже орет"
+    }
+  },
+  {
+    "model": "cats.categories",
+    "pk": 3,
+    "fields": {
+      "name": "Ангорка",
+      "description": "Длинношерстная кошка, очень красивая"
+    }
+  },
+  {
+    "model": "cats.cat",
+    "pk": 1,
+    "fields": {
+      "name": "Тося",
+      "category": 1,
+      "photo": "",
+      "dob": "2020-08-15"
+    }
+  },
+  {
+    "model": "cats.cat",
+    "pk": 2,
+    "fields": {
+      "name": "Тосьманский дьявол",
+      "category": 2,
+      "photo": "",
+      "dob": "2020-08-10"
+    }
+  },
+  {
+    "model": "cats.cat",
+    "pk": 3,
+    "fields": {
+      "name": "Тосенька",
+      "category": 3,
+      "photo": "",
+      "dob": "2020-08-21"
+    }
+  },
+  {
+    "model": "cats.cat",
+    "pk": 4,
+    "fields": {
+      "name": "Шерстеняш",
+      "category": 3,
+      "photo": "",
+      "dob": "2020-08-21"
+    }
+  }
+]
