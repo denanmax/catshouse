@@ -1,0 +1,128 @@
+[
+  {
+    "model": "cats.categories",
+    "pk": 1,
+    "fields": {
+      "name": "Ангорка",
+      "description": "Длинношерстная красивейшая кошка высокой грации",
+      "photo": ""
+    }
+  },
+  {
+    "model": "cats.categories",
+    "pk": 2,
+    "fields": {
+      "name": "Бесоёб",
+      "description": "Сумасшедшая кошка , которая бегает, прыгает, хулиганит",
+      "photo": ""
+    }
+  },
+  {
+    "model": "cats.categories",
+    "pk": 3,
+    "fields": {
+      "name": "Милашка",
+      "description": "Миленькая хорошенькая кошечка",
+      "photo": ""
+    }
+  },
+  {
+    "model": "cats.categories",
+    "pk": 4,
+    "fields": {
+      "name": "БП",
+      "description": "обычная , уличная,даже может помойная кошка",
+      "photo": ""
+    }
+  },
+  {
+    "model": "cats.cat",
+    "pk": 1,
+    "fields": {
+      "name": "Тося",
+      "category": 4,
+      "photo": "cats/photo_2023-09-01_13-56-14.jpg",
+      "dob": "2020-08-15"
+    }
+  },
+  {
+    "model": "cats.cat",
+    "pk": 2,
+    "fields": {
+      "name": "Тосильда",
+      "category": 1,
+      "photo": "",
+      "dob": "2020-08-12"
+    }
+  },
+  {
+    "model": "cats.cat",
+    "pk": 3,
+    "fields": {
+      "name": "Тосьмансктй Дьявол",
+      "category": 2,
+      "photo": "",
+      "dob": "2020-08-11"
+    }
+  },
+  {
+    "model": "cats.cat",
+    "pk": 4,
+    "fields": {
+      "name": "Тосенька",
+      "category": 3,
+      "photo": "cats/photo_2023-09-01_13-56-38.jpg",
+      "dob": "2020-08-20"
+    }
+  },
+  {
+    "model": "cats.cat",
+    "pk": 7,
+    "fields": {
+      "name": "Жопа",
+      "category": 2,
+      "photo": "",
+      "dob": "2020-08-11"
+    }
+  },
+  {
+    "model": "cats.cat",
+    "pk": 8,
+    "fields": {
+      "name": "Жопёшка",
+      "category": 2,
+      "photo": "",
+      "dob": "2020-08-11"
+    }
+  },
+  {
+    "model": "cats.cat",
+    "pk": 9,
+    "fields": {
+      "name": "Картошка",
+      "category": 2,
+      "photo": "",
+      "dob": "2020-08-10"
+    }
+  },
+  {
+    "model": "cats.cat",
+    "pk": 10,
+    "fields": {
+      "name": "Шерстеняш",
+      "category": 1,
+      "photo": "",
+      "dob": "2020-05-10"
+    }
+  },
+  {
+    "model": "cats.parent",
+    "pk": 1,
+    "fields": {
+      "cat": 2,
+      "name": "Момзель",
+      "category": 1,
+      "birth_day": "2015-03-12"
+    }
+  }
+]
