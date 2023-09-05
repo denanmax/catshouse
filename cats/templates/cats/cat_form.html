@@ -1,0 +1,58 @@
+{% extends 'cats/base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<form method="post" class="row">
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card mb-5">
+                    <div class="card-header ">
+                        {% if object %}
+                            <h5>Редактировать Кошку</h5>
+                        {% else %}
+                            <h5>Добавить кошку</h5>
+                        {% endif %}
+                    </div>
+
+                    <div class="card-body">
+
+                            {% csrf_token %}
+
+                            <div class="form-group">
+                                {{ form.as_p }}
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">
+                                {% if object %}
+                                    Сохранить
+                                {% else %}
+                                    Добавить
+                                {% endif %}
+                            </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-5">
+                    <div class="card-header ">
+                        <h5>Родословная</h5>
+                    </div>
+
+                    <div class="card-body">
+
+                            {{ formset.management_form }}
+                            {% for form in formset.forms %}
+                                {{ form.as_p }}
+                                {% if not forloop.last %}
+                                    <hr>
+                                {% endif %}
+                            {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock %}

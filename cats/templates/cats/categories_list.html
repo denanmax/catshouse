@@ -1,0 +1,36 @@
+{% extends 'cats/base.html' %}
+{% block content %}
+<main role="main">
+
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+            <div class="container">
+              <div class="carousel-caption text-center">
+                <h1>{{ title }}</h1>
+                <p>Выбирай самую лучшую</p>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+  <div class="container marketing">
+      <a class="btn btn-lg btn-primary mt-5" href="{% url 'cats:cat_create' %}" role="button">Добавить Кошку</a></p>
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row mt-5">
+        {% for object in object_list %}
+            {% include 'cats/includes/inc_category.html' %}
+        {% endfor %}
+        </div><!-- /.row -->
+
+  </div><!-- /.container -->
+ </main>
+{% endblock %}

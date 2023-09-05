@@ -1,0 +1,24 @@
+{% extends 'cats/base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card mb-5">
+                <div class="card-header ">
+                        <h5>Удаление животного</h5>
+                </div>
+
+                <div class="card-body">
+                    <form method="post">
+                        {% csrf_token %}
+                        <p>Действительно хотите удалить животное? {{ object.name }}</p>
+                        <button type="submit" class="btn btn-danger">Удалить</button>
+                        <a class="btn btn-outline-warning" href="{% url 'cats:cats' object.category.pk %}">Отмена</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
