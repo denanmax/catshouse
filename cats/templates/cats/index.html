@@ -1,36 +1,44 @@
 {% extends 'cats/base.html' %}
 {% block content %}
-<main role="main">
 
-      <main id="myCarousel" class="carousel slide" data-ride="carousel">
+
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
           <li data-target="#myCarousel" data-slide-to="1"></li>
           <li data-target="#myCarousel" data-slide-to="2"></li>
         </ol>
-        <div class="carousel-inner">
+      <div class="carousel-inner">
           <div class="carousel-item active">
-            <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+            <img class="first-slide" src="media/main/tosya_main.jpg" alt="First slide">
             <div class="container">
-              <div class="carousel-caption text-center">
+              <div class="carousel-caption text-left">
                 <h1>{{ title }}</h1>
-                <p>Это страничка нашей кошки Тоси</p>
+                <p>Тут представлены все сущности нашей кошки - Тоси</p>
                 <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
               </div>
             </div>
           </div>
-            <div class="carousel-item">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
-
-        <div class="container">
-          <div class="carousel-caption">
-            <h1>Все наши породы</h1>
-            <p>Посмотрите полный список наших пород</p>
-            <p><a class="btn btn-lg btn-primary" href="{% url 'cats:categories' %}">Learn more</a></p>
+          <div class="carousel-item">
+            <img class="second-slide" src="media/main/tosya_all.jpg" alt="Second slide">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Все наши кошки</h1>
+                <p>Список всех сущностей нащей кошки.</p>
+                <p><a class="btn btn-lg btn-primary" href="{% url 'cats:all_cats' %}" role="button">Смотреть</a></p>
+              </div>
+            </div>
           </div>
-        </div>
-
-
+          <div class="carousel-item">
+            <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+            <div class="container">
+              <div class="carousel-caption text-right">
+                <h1>One more for good measure.</h1>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+              </div>
+            </div>
+          </div>
         </div>
         <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>

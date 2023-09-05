@@ -35,6 +35,15 @@
             <li class="nav-item">
               <a class="nav-link disabled" href="{% url 'cats:all_cats' %}">Все кошки</a>
             </li>
+            {% if user.is_authenticated %}
+              <li class="nav-item">
+                <a class="btn btn-lg btn-primary" href="{% url 'users:logout' %}" role="button">Выход</a>
+              </li>
+            {% else %}
+              <li class="nav-item">
+                <a class="btn btn-lg btn-primary" href="{% url 'users:login' %}" role="button">Вход</a>
+              </li>
+            {% endif %}
           </ul>
           <form class="form-inline mt-2 mt-md-0">
             <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">

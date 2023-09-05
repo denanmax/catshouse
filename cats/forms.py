@@ -22,8 +22,6 @@ class CatForm(StyleFormMixin, forms.ModelForm):
     def clean_dob(self):
         cleaned_data = self.cleaned_data['dob']
         now_year = datetime.datetime.now().year
-        print(now_year)
-        print(cleaned_data.year)
         if now_year - cleaned_data.year > 100:
             raise forms.ValidationError('собака должна быть моложе 100 лет')
         return cleaned_data

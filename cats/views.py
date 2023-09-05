@@ -87,8 +87,11 @@ class CatUpdateView(UpdateView):
     model = Cat
     form_class = CatForm
 
+    # def get_success_url(self):
+    #     return reverse('cats:cat_update', args=[self.kwargs.get('pk')])
     def get_success_url(self):
-        return reverse('cats:cat_update', args=[self.kwargs.get('pk')])
+        return reverse('cats:cats', args=[self.object.category.pk])
+
 
     def get_context_data(self, **kwargs):
         context_data = super().get_context_data(**kwargs)
